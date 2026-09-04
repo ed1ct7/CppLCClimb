@@ -1,3 +1,5 @@
-set(CMAKE_CXX_STANDARD 26)
-cmake_minimum_required(VERSION 3.20)
-project(CppLCClimb)
+cmake_minimum_required(VERSION 4.1.2)
+project(CppLCClimb LANGUAGES CXX)
+add_executable(calculator src/main.cpp)
+target_compile_features(calculator PRIVATE cxx_std_23)
+set_target_properties(calculator PROPERTIES CXX_EXTENSIONS OFF)
